@@ -25,7 +25,7 @@ namespace ogloszeniowy_Xamarin
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new TabbedPage1());
+            MainPage = new NavigationPage(new loginRegisterPage());
         }
 
         protected override void OnStart()

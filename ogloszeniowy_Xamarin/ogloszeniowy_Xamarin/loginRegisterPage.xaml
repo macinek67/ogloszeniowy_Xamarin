@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ogloszeniowy_Xamarin.loginRegisterPage" BackgroundColor="#e8e8e8" NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <StackLayout Margin="10,35,10,0">
+            <StackLayout>
+                <Label Text="Witaj na portalu ogloszeniowym!" FontSize="25" FontAttributes="Bold" TextColor="DodgerBlue" HorizontalOptions="Center"/>
+                <Label Text="Zaloguj sie, aby przejsc dalej." FontAttributes="Bold" HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Margin="0,100,0,0">
+                <Label Text="Login:" FontSize="17" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                <Entry x:Name="login_Entry" Placeholder="Podaj login"/>
+                <Label Text="Haslo:" FontSize="17" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" Margin="0,20,0,0"/>
+                <Entry x:Name="password_Entry" Placeholder="Podaj haslo"/>
+            </StackLayout>
+            <StackLayout Margin="0,100,0,0">
+                <Button Text="ZALOGUJ SIE" BackgroundColor="DodgerBlue" TextColor="White" FontAttributes="Bold"/>
+                <Button Text="ZAREJESTRUJ SIE" BackgroundColor="DarkGray" TextColor="Black" FontAttributes="Bold"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
