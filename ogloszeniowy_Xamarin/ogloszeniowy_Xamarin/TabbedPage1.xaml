@@ -8,5 +8,7 @@
              android:TabbedPage.ToolbarPlacement="Bottom"
              >
   <!--Pages can be added as references or inline-->
-    <local:MainPage Title="glowna"></local:MainPage>
+    <local:MainPage Title="Strona glowna" IconImageSource="mainPageIcon.png"></local:MainPage>
+    <local:searchOffersPage Title="Oferty" IconImageSource="offerIcon.png"></local:searchOffersPage>
+    <local:AccountPage Title="Konto" IconImageSource="accountIcon.png"></local:AccountPage>
 </TabbedPage>
