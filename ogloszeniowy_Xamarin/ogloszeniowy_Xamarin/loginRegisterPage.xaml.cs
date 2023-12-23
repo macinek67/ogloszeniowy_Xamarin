@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using system_ogloszeniowy.classes;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,5 +16,28 @@ namespace ogloszeniowy_Xamarin
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void registerButton_Clicked(object sender, EventArgs e)
+        {
+            if (login_Entry.Text.Length < 4 || password_Entry.Text.Length < 4)
+            {
+                DisplayAlert("Informacja", "Wprowadzone dane maja zbyt malo znakow aby zostaly zaakceptowane", "OK");
+                return;
+            }
+
+            User newUser = new User()
+            {
+                Role_id = 2,
+                Login = login_Entry.Text,
+                Password = password_Entry.Text
+            };
+
+            await App.Database.InsertUser(newUser);
+        }
+
+        private void loginButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

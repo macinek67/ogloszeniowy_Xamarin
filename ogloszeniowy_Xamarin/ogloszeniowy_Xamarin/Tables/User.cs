@@ -14,7 +14,7 @@ namespace system_ogloszeniowy.classes
         public int User_id { get; set; }
         public int Role_id { get; set; }
         [MaxLength(35)]
-        public string Email { get; set; }
+        public string Login { get; set; }
         [MaxLength(25)]
         public string Password { get; set; }
     }
