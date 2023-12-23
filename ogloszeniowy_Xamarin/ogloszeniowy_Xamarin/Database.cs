@@ -39,14 +39,14 @@ namespace system_ogloszeniowyAleToXamarin
             return _database.QueryAsync<User>("SELECT * FROM User");
         }
 
-        public Task<List<User>> GetUsers(string email)
+        public Task<List<User>> GetUsers(string login)
         {
-            return _database.QueryAsync<User>("SELECT * FROM User WHERE Email=?", email);
+            return _database.QueryAsync<User>("SELECT * FROM User WHERE Login=?", login);
         }
 
-        public Task<List<User>> GetUsers(string email, string password)
+        public Task<List<User>> GetUsers(string login, string password)
         {
-            return _database.QueryAsync<User>("SELECT * FROM User WHERE Email=? AND Password=?", email, password);
+            return _database.QueryAsync<User>("SELECT * FROM User WHERE Login=? AND Password=?", login, password);
         }
 
         public Task<int> InsertUser(User user)

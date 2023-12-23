@@ -35,9 +35,18 @@ namespace ogloszeniowy_Xamarin
             await App.Database.InsertUser(newUser);
         }
 
-        private void loginButton_Clicked(object sender, EventArgs e)
+        private async void loginButton_Clicked(object sender, EventArgs e)
         {
+            var users = await App.Database.GetUsers(login_Entry.Text, password_Entry.Text);
+            if (login_Entry.Text.Length < 4 || password_Entry.Text.Length < 4 || users.Count() == 0)
+            {
+                DisplayAlert("Informacja", "Wprowadzone dane sa nieprawidlowe", "OK");
+                return;
+            }
 
+            var user = users[0];
+
+            Navigation.PushAsync(new TabbedPage1(user));
         }
     }
 }
