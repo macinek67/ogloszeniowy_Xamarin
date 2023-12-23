@@ -17,6 +17,18 @@ namespace ogloszeniowy_Xamarin
         {
             InitializeComponent();
             this.user = user;
+
+            this.Children.Add(new MainPage(user));
+            this.Children[0].Title = "Strona glowna";
+            this.Children[0].Icon = "mainPageIcon.png";
+
+            this.Children.Add(new searchOffersPage());
+            this.Children[1].Title = "Oferty";
+            this.Children[1].Icon = "offerIcon.png";
+
+            this.Children.Add(new AccountPage());
+            this.Children[2].Title = "Konto";
+            this.Children[2].Icon = "accountIcon.png";
         }
     }
 }

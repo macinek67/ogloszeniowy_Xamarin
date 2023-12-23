@@ -38,14 +38,16 @@ namespace ogloszeniowy_Xamarin
 
         private async void loginButton_Clicked(object sender, EventArgs e)
         {
+            login_Entry.Text = "admin@gmail.com";
+            password_Entry.Text = "sigma";
             var users = await App.Database.GetUsers(login_Entry.Text, password_Entry.Text);
-            if (login_Entry.Text.Length < 4 || password_Entry.Text.Length < 4 || users.Count() == 0)
+            if (users.Count() == 0)
             {
                 DisplayAlert("Informacja", "Wprowadzone dane sa nieprawidlowe", "OK");
                 return;
             }
 
-            var user = users[0];
+            var user = users.ElementAt(0);
 
             Navigation.PushAsync(new TabbedPage1(user));
         }
