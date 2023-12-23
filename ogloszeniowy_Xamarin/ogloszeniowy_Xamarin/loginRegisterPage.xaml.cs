@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using system_ogloszeniowy.classes;
+using system_ogloszeniowy.Tables;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

@@ -16,7 +16,7 @@ namespace ogloszeniowy_Xamarin
             {
                 if (database == null)
                 {
-                    database = new Database("ogloszeniowyXam.db3");
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ogloszeniowyXam.db3"));
                 }
                 return database;
             }
