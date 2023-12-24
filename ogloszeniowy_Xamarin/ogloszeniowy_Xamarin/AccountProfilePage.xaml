@@ -12,14 +12,14 @@
                                 <Label Text="DANE PERSONALNE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
                                 <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
                                 <Label Text="Imie:" FontAttributes="Bold"/>
-                                <Entry/>
+                                <Entry x:Name="name_Entry"/>
                                 <Label Text="Naziwksko:" FontAttributes="Bold"/>
-                                <Entry/>
+                                <Entry x:Name="surname_Entry"/>
                                 <Label Text="Aktualne stanowisko:" FontAttributes="Bold"/>
-                                <Entry/>
+                                <Entry x:Name="currentOccupation_entry"/>
                                 <Label Text="Miasto:" FontAttributes="Bold"/>
-                                <Entry/>
-                                <Button Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                                <Entry x:Name="city_Entry"/>
+                                <Button x:Name="personalDataSaveButton" Clicked="personalDataSaveButton_Clicked" Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
                             </StackLayout>
                         </Frame>
                         <Frame CornerRadius="15" Margin="0,10,0,0">
@@ -27,18 +27,18 @@
                                 <Label Text="DANE KONTAKTOWE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
                                 <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
                                 <Label Text="Data urodzenia:" FontAttributes="Bold"/>
-                                <DatePicker/>
+                                <DatePicker x:Name="birthDate_Entry"/>
                                 <Label Text="Numer telefonu:" FontAttributes="Bold"/>
-                                <Entry/>
-                                <Button Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                                <Entry x:Name="telephone_Entry"/>
+                                <Button x:Name="contactDataSaveButton" Clicked="contactDataSaveButton_Clicked" Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
                             </StackLayout>
                         </Frame>
                         <Frame CornerRadius="15" Margin="0,10,0,0">
                             <StackLayout BackgroundColor="White">
                                 <Label Text="PODSUMOWANIE ZAWODOWE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
                                 <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
-                                <Editor HeightRequest="150"/>
-                                <Button Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                                <Editor x:Name="occupationSummary_Editor" HeightRequest="150"/>
+                                <Button x:Name="occupationSummarySaveButton" Clicked="occupationSummarySaveButton_Clicked" Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
