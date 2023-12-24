@@ -4,9 +4,46 @@
              x:Class="ogloszeniowy_Xamarin.AccountProfilePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ScrollView>
+                <StackLayout BackgroundColor="Transparent" Padding="10">
+                    <StackLayout Margin="2,2,2,2">
+                        <Frame CornerRadius="15">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="DANE PERSONALNE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                                <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                                <Label Text="Imie:" FontAttributes="Bold"/>
+                                <Entry/>
+                                <Label Text="Naziwksko:" FontAttributes="Bold"/>
+                                <Entry/>
+                                <Label Text="Aktualne stanowisko:" FontAttributes="Bold"/>
+                                <Entry/>
+                                <Label Text="Miasto:" FontAttributes="Bold"/>
+                                <Entry/>
+                                <Button Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame CornerRadius="15" Margin="0,10,0,0">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="DANE KONTAKTOWE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                                <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                                <Label Text="Data urodzenia:" FontAttributes="Bold"/>
+                                <DatePicker/>
+                                <Label Text="Numer telefonu:" FontAttributes="Bold"/>
+                                <Entry/>
+                                <Button Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame CornerRadius="15" Margin="0,10,0,0">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="PODSUMOWANIE ZAWODOWE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                                <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                                <Editor HeightRequest="150"/>
+                                <Button Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
