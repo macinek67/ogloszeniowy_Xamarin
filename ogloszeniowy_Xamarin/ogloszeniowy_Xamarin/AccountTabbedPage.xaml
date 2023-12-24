@@ -3,25 +3,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ogloszeniowy_Xamarin.AccountTabbedPage" BackgroundColor="#e8e8e8" BarBackgroundColor="White" BarTextColor="DimGray">
   <!--Pages can be added as references or inline-->
-    <ContentPage Title="Profil">
-        <ContentPage.Content>
-            <StackLayout>
-                <Label Text="xd1"/>
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
-    <ContentPage Title="Zaaplikowane">
-        <ContentPage.Content>
-            <StackLayout>
-                <Label Text="xd2"/>
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
-    <ContentPage Title="Zapisane">
-        <ContentPage.Content>
-            <StackLayout>
-                <Label Text="xd3"/>
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
+
 </TabbedPage>

@@ -17,6 +17,15 @@ namespace ogloszeniowy_Xamarin
         {
             InitializeComponent();
             this.user = user;
+
+            this.Children.Add(new AccountProfilePage(user));
+            this.Children[0].Title = "Profil";
+
+            this.Children.Add(new AccountAppliedPage(user));
+            this.Children[1].Title = "Zaaplikowane";
+
+            this.Children.Add(new AccountSavedPage(user));
+            this.Children[2].Title = "Zapisane";
         }
     }
 }
