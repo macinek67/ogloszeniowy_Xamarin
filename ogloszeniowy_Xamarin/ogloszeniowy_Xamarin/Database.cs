@@ -59,9 +59,29 @@ namespace system_ogloszeniowyAleToXamarin
             return _database.InsertAsync(role);
         }
 
+        public Task<int> InsertAnnouncement(Announcement announcement)
+        {
+            return _database.InsertAsync(announcement);
+        }
+
         public Task<List<User_role>> GetRoles()
         {
             return _database.QueryAsync<User_role>("SELECT * FROM User_role");
+        }
+
+        public Task<List<Announcement>> GetAnnouncements()
+        {
+            return _database.QueryAsync<Announcement>("SELECT * FROM Announcement");
+        }
+
+        public Task<List<Company>> GetCompany()
+        {
+            return _database.QueryAsync<Company>("SELECT * FROM Company");
+        }
+
+        public Task<List<Announcement_category>> GetCategory()
+        {
+            return _database.QueryAsync<Announcement_category>("SELECT * FROM Announcement_category");
         }
 
         public Task<List<User_language>> GetUser_language()
@@ -97,6 +117,21 @@ namespace system_ogloszeniowyAleToXamarin
         public Task<int> UpdateUser_data(User_data user_data)
         {
             return _database.UpdateAsync(user_data);
+        }
+
+        public Task<int> UpdateUser(User user)
+        {
+            return _database.UpdateAsync(user);
+        }
+
+        public Task<int> InsertCategory(Announcement_category category)
+        {
+            return _database.InsertAsync(category);
+        }
+
+        public Task<int> InsertCompany(Company company)
+        {
+            return _database.InsertAsync(company);
         }
     }
 }

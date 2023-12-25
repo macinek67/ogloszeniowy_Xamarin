@@ -10,13 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace ogloszeniowy_Xamarin
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class searchOffersPage : ContentPage
+	public partial class AccountAppliedPage : ContentPage
 	{
 		User user;
-		public searchOffersPage(User user)
+		public AccountAppliedPage (User user)
 		{
-			InitializeComponent();
+			InitializeComponent ();
 			this.user = user;
-		}
+        }
 	}
 }

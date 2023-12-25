@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ogloszeniowy_Xamarin.AccountProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout BackgroundColor="Transparent" Padding="10">
+                    <StackLayout Margin="2,2,2,2">
+                        <Frame CornerRadius="15">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="DANE PERSONALNE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                                <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                                <Label Text="Imie:" FontAttributes="Bold"/>
+                                <Entry x:Name="name_Entry"/>
+                                <Label Text="Naziwksko:" FontAttributes="Bold"/>
+                                <Entry x:Name="surname_Entry"/>
+                                <Label Text="Aktualne stanowisko:" FontAttributes="Bold"/>
+                                <Entry x:Name="currentOccupation_entry"/>
+                                <Label Text="Miasto:" FontAttributes="Bold"/>
+                                <Entry x:Name="city_Entry"/>
+                                <Button x:Name="personalDataSaveButton" Clicked="personalDataSaveButton_Clicked" Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame CornerRadius="15" Margin="0,10,0,0">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="DANE KONTAKTOWE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                                <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                                <Label Text="Data urodzenia:" FontAttributes="Bold"/>
+                                <DatePicker x:Name="birthDate_Entry"/>
+                                <Label Text="Numer telefonu:" FontAttributes="Bold"/>
+                                <Entry x:Name="telephone_Entry"/>
+                                <Button x:Name="contactDataSaveButton" Clicked="contactDataSaveButton_Clicked" Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame CornerRadius="15" Margin="0,10,0,0">
+                            <StackLayout BackgroundColor="White">
+                                <Label Text="PODSUMOWANIE ZAWODOWE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                                <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                                <Editor x:Name="occupationSummary_Editor" HeightRequest="150"/>
+                                <Button x:Name="occupationSummarySaveButton" Clicked="occupationSummarySaveButton_Clicked" Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -16,7 +16,7 @@ namespace system_ogloszeniowy.classes
         public string Name { get; set; }
         [MaxLength(25)]
         public string Surname { get; set; }
-        public string Birth_date { get; set; }
+        public DateTime Birth_date { get; set; }
         [MaxLength(9)]
         public string Telephone_number { get; set; }
         [MaxLength(35)]
