@@ -18,5 +18,15 @@ namespace ogloszeniowy_Xamarin
 			InitializeComponent();
 			this.user = user;
 		}
-	}
+
+        private void searchOffers_Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
