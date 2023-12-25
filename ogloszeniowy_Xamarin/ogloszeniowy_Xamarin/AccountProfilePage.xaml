@@ -9,6 +9,12 @@
                     <StackLayout Margin="2,2,2,2">
                         <Frame CornerRadius="15">
                             <StackLayout BackgroundColor="White">
+                                <Label Text="TWOJ PROFIL" HorizontalOptions="Center" FontSize="20" TextColor="Black" FontAttributes="bold"/>
+                            </StackLayout>
+                        </Frame>
+                        <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,10,0,10"/>
+                        <Frame CornerRadius="15">
+                            <StackLayout BackgroundColor="White">
                                 <Label Text="DANE PERSONALNE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
                                 <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
                                 <Label Text="Imie:" FontAttributes="Bold"/>

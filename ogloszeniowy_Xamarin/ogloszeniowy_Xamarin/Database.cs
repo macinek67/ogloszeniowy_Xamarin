@@ -59,6 +59,21 @@ namespace system_ogloszeniowyAleToXamarin
             return _database.InsertAsync(role);
         }
 
+        public Task<int> InsertApplication(User_application userApp)
+        {
+            return _database.InsertAsync(userApp);
+        }
+
+        public Task<List<User_application>> GetApps(int user_id)
+        {
+            return _database.QueryAsync<User_application>("SELECT * FROM User_application WHERE User_id=?", user_id);
+        }
+
+        public Task<List<Announcement>> GetAnnouncementById(int announcement_id)
+        {
+            return _database.QueryAsync<Announcement>("SELECT * FROM Announcement WHERE Announcement_id=? LIMIT 1", announcement_id);
+        }
+
         public Task<int> InsertAnnouncement(Announcement announcement)
         {
             return _database.InsertAsync(announcement);
@@ -77,6 +92,11 @@ namespace system_ogloszeniowyAleToXamarin
         public Task<List<Company>> GetCompany()
         {
             return _database.QueryAsync<Company>("SELECT * FROM Company");
+        }
+
+        public Task<List<Company>> GetCompanyById(int company_id)
+        {
+            return _database.QueryAsync<Company>("SELECT * FROM Company WHERE Company_id=? LIMIT 1", company_id);
         }
 
         public Task<List<Announcement_category>> GetCategory()
@@ -122,6 +142,11 @@ namespace system_ogloszeniowyAleToXamarin
         public Task<int> UpdateUser(User user)
         {
             return _database.UpdateAsync(user);
+        }
+
+        public Task<int> UpdateAnnoucement(Announcement announcement)
+        {
+            return _database.UpdateAsync(announcement);
         }
 
         public Task<int> InsertCategory(Announcement_category category)

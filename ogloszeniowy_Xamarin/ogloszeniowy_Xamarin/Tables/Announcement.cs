@@ -12,6 +12,7 @@ namespace system_ogloszeniowy.classes
         [PrimaryKey, AutoIncrement]
         public int Announcement_id { get; set; }
         public int Company_id { get; set; }
+        public string Adress { get; set; }
         public int Category_id { get; set; }
         [MaxLength(75)]
         public string Position_name { get; set; }
