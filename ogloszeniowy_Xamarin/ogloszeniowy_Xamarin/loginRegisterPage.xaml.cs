@@ -38,7 +38,9 @@ namespace ogloszeniowy_Xamarin
 
         private async void loginButton_Clicked(object sender, EventArgs e)
         {
-            login_Entry.Text = "admin@gmail.com";
+            //login_Entry.Text = "admin@gmail.com";
+            //password_Entry.Text = "sigma";
+            login_Entry.Text = "user@gmail.com";
             password_Entry.Text = "sigma";
             var users = await App.Database.GetUsers(login_Entry.Text, password_Entry.Text);
             if (users.Count() == 0)
