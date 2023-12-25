@@ -23,7 +23,8 @@ namespace ogloszeniowy_Xamarin
 
         public async void UploadAnnoucementData()
         {
-
+            company_Picker.ItemsSource = await App.Database.GetCompany();
+            category_Picker.ItemsSource = await App.Database.GetCategory();
         }
 
         private async void categoryAdd_Button_Clicked(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace ogloszeniowy_Xamarin
 
             categoryName_Entry.Text = "";
             await App.Database.InsertCategory(category);
+            UploadAnnoucementData();
         }
 
         private async void roleAdd_Button_Clicked(object sender, EventArgs e)
@@ -50,6 +52,26 @@ namespace ogloszeniowy_Xamarin
 
         private async void announcementAdd_Button_Clicked(object sender, EventArgs e)
         {
+            Announcement announcement = new Announcement()
+            {
+                Company_id = ((Company)company_Picker.SelectedItem).Company_id,
+                Category_id = ((Announcement_category)category_Picker.SelectedItem).AnnouncementCategory_id,
+                Position_name = occupationName_Entry.Text,
+                Position_level = (string)positionLevel_Picker.SelectedItem,
+                Contract_type = (string)contractType_Picker.SelectedItem,
+                Working_time = (string)workingTime_Picker.SelectedItem,
+                Work_type = (string)workType_Picker.SelectedItem,
+                End_date = endDate_DatePicker.Date,
+                Responsibilities = responsibilities_Editor.Text,
+                Requirements = requirements_Editor.Text,
+                Benefits = benefits_Editor.Text
+            };
+
+            await App.Database.InsertAnnouncement(announcement);
+        }
+
+        private async void companyAdd_Button_Clicked(object sender, EventArgs e)
+        {
             Company company = new Company()
             {
                 Name = companyName_Entry.Text
@@ -57,11 +79,7 @@ namespace ogloszeniowy_Xamarin
 
             companyName_Entry.Text = "";
             await App.Database.InsertCompany(company);
-        }
-
-        private void companyAdd_Button_Clicked(object sender, EventArgs e)
-        {
-
+            UploadAnnoucementData();
         }
     }
 }

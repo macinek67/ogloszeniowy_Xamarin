@@ -47,9 +47,9 @@
                             <Label Text="DODAJ OGLOSZENIE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
                             <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
                             <Label Text="Firma:" FontAttributes="Bold"/>
-                            <Picker x:Name="company_Picker"></Picker>
+                            <Picker x:Name="company_Picker" ItemDisplayBinding="{Binding Name}"></Picker>
                             <Label Text="Kategoria:" FontAttributes="Bold"/>
-                            <Picker x:Name="category_Picker"></Picker>
+                            <Picker x:Name="category_Picker" ItemDisplayBinding="{Binding Name}"></Picker>
                             <Label Text="Nazwa stanowiska:" FontAttributes="Bold"/>
                             <Entry x:Name="occupationName_Entry"/>
                             <Label Text="Poziom stanowiska:" FontAttributes="Bold"/>
