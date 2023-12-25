@@ -23,6 +23,7 @@ namespace ogloszeniowy_Xamarin
 		public async void UploadData()
 		{
 			var user_applied = await App.Database.GetApps(user.User_id);
+			if (user_applied == null || user_applied.Count() == 0) return;
 
 			List<List<string>> announcements = new List<List<string>>();
 
