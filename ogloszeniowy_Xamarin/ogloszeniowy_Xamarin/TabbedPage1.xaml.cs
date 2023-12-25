@@ -18,7 +18,7 @@ namespace ogloszeniowy_Xamarin
             InitializeComponent();
             this.user = user;
 
-            this.Children.Add(new MainPage(user));
+            this.Children.Add(new adminPanelPage(user));
             this.Children[0].Title = "Strona glowna";
             this.Children[0].Icon = "mainPageIcon.png";
 

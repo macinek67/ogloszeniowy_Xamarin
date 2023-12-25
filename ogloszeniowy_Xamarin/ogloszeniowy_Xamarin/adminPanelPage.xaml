@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ogloszeniowy_Xamarin.adminPanelPage" BackgroundColor="#e8e8e8"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="White" Padding="0">
+                    <Image Source="appLogo.png" HeightRequest="60"/>
+                </Frame>
+                <StackLayout Padding="10" Margin="2,2,2,2">
+                    <Frame CornerRadius="15">
+                        <StackLayout BackgroundColor="White">
+                            <Label Text="PANEL ADMINISTRATORA" HorizontalOptions="Center" FontSize="20" TextColor="Black" FontAttributes="bold"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame CornerRadius="15" Margin="0,25,0,0">
+                        <StackLayout BackgroundColor="White">
+                            <Label Text="DODAJ KATEGORIE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                            <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                            <Label Text="Nazwa:" FontAttributes="Bold"/>
+                            <Entry x:Name="categoryName_Entry"/>
+                            <Button Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame CornerRadius="15" Margin="0,5,0,0">
+                        <StackLayout BackgroundColor="White">
+                            <Label Text="DODAJ ROLE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                            <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                            <Label Text="Nazwa:" FontAttributes="Bold"/>
+                            <Entry x:Name="roleName_Entry"/>
+                            <Button Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
