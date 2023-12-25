@@ -15,7 +15,8 @@
                             <Label Text="PANEL ADMINISTRATORA" HorizontalOptions="Center" FontSize="20" TextColor="Black" FontAttributes="bold"/>
                         </StackLayout>
                     </Frame>
-                    <Frame CornerRadius="15" Margin="0,25,0,0">
+                    <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,10,0,10"/>
+                    <Frame CornerRadius="15">
                         <StackLayout BackgroundColor="White">
                             <Label Text="DODAJ KATEGORIE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
                             <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
@@ -48,6 +49,8 @@
                             <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
                             <Label Text="Firma:" FontAttributes="Bold"/>
                             <Picker x:Name="company_Picker" ItemDisplayBinding="{Binding Name}"></Picker>
+                            <Label Text="Adres:" FontAttributes="Bold"/>
+                            <Entry x:Name="Adress_Entry"/>
                             <Label Text="Kategoria:" FontAttributes="Bold"/>
                             <Picker x:Name="category_Picker" ItemDisplayBinding="{Binding Name}"></Picker>
                             <Label Text="Nazwa stanowiska:" FontAttributes="Bold"/>

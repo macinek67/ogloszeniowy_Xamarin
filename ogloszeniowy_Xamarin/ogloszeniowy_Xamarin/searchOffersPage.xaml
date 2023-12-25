@@ -4,8 +4,99 @@
              x:Class="ogloszeniowy_Xamarin.searchOffersPage" BackgroundColor="#e8e8e8"
              >
     <ContentPage.Content>
-        <StackLayout>
-            
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="White" Padding="0">
+                    <Image Source="appLogo.png" HeightRequest="60"/>
+                </Frame>
+                <StackLayout Padding="10" Margin="2,2,2,2">
+                    <Frame CornerRadius="15">
+                        <StackLayout BackgroundColor="White">
+                            <Label Text="WYSZUKAJ NAJLEPSZE OFERTY" HorizontalOptions="Center" FontSize="20" TextColor="Black" FontAttributes="bold"/>
+                            <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,10,0,10"/>
+                            <Label Text="Nazwa stanowiska:" FontAttributes="Bold"/>
+                            <Entry x:Name="occupationName_Entry"/>
+                            <Label Text="Kategoria:" FontAttributes="Bold"/>
+                            <Picker x:Name="category_Picker" ItemDisplayBinding="{Binding Name}"></Picker>
+                            <Label Text="Poziom stanowiska:" FontAttributes="Bold"/>
+                            <Picker x:Name="positionLevel_Picker">
+                                <Picker.Items>
+                                    <x:String>Praktykant / stazysta</x:String>
+                                    <x:String>Asystent</x:String>
+                                    <x:String>Mlodszy specjalista (junior)</x:String>
+                                    <x:String>Specjalista (Mid / Regular)</x:String>
+                                    <x:String>Starszy specjalista (Senior)</x:String>
+                                    <x:String>Ekspert</x:String>
+                                    <x:String>Kierownik / koordynator</x:String>
+                                    <x:String>Menedzer</x:String>
+                                    <x:String>Dyrektor</x:String>
+                                    <x:String>Prezes</x:String>
+                                    <x:String>Pracownik fizyczny</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Label Text="Typ kontraktu:" FontAttributes="Bold"/>
+                            <Picker x:Name="contractType_Picker">
+                                <Picker.Items>
+                                    <x:String>Umowa o prace</x:String>
+                                    <x:String>Umowa o dzielo</x:String>
+                                    <x:String>Umowa zlecenie</x:String>
+                                    <x:String>Kontrakt B2B</x:String>
+                                    <x:String>Umowa na zastepstwo</x:String>
+                                    <x:String>Umowa agencyjna</x:String>
+                                    <x:String>Umowa o prace tymczasowa</x:String>
+                                    <x:String>Umowa o staz / praktyki</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Label Text="Wymiar pracy:" FontAttributes="Bold"/>
+                            <Picker x:Name="workingTime_Picker">
+                                <Picker.Items>
+                                    <x:String>Czesc etatu</x:String>
+                                    <x:String>Dodatkowa / tymczasowa</x:String>
+                                    <x:String>Pelny etat</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Label Text="Tryb pracy:" FontAttributes="Bold"/>
+                            <Picker x:Name="workType_Picker">
+                                <Picker.Items>
+                                    <x:String>Praca stacjonarna</x:String>
+                                    <x:String>Praca hybrydowa</x:String>
+                                    <x:String>Praca zdalna</x:String>
+                                    <x:String>Praca mobilna</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Button x:Name="searchOffers_Button" Clicked="searchOffers_Button_Clicked" Text="SZUKAJ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout Margin="2,15,2,2" HeightRequest="635">
+                        <ListView x:Name="searchedAnnouncements_ListView" RowHeight="115" BackgroundColor="Transparent" SeparatorColor="Transparent">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ViewCell.View>
+                                            <Frame CornerRadius="15" Padding="10" BindingContext="{Binding}" Margin="0,5,0,5">
+                                                <Frame.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                                </Frame.GestureRecognizers>
+                                                <StackLayout BackgroundColor="White" BindingContext="{Binding}">
+                                                    <Label Text="{Binding [1]}" FontSize="16" FontAttributes="Bold" TextColor="DodgerBlue"/>
+                                                    <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,5"/>
+                                                    <Label Text="{Binding [2]}" FontAttributes="Bold" TextColor="IndianRed"/>
+                                                    <Label Text="{Binding [3]}"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </ViewCell.View>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <StackLayout BackgroundColor="Transparent" Margin="0,5,0,0" Orientation="Horizontal" HorizontalOptions="Center">
+                            <Button x:Name="pagePrevious_Button" Clicked="pagePrevious_Button_Clicked" Text="POPRZEDNIA" BackgroundColor="IndianRed" CornerRadius="10" FontAttributes="Bold"/>
+                            <Label x:Name="currentPage_Label" Text="1" VerticalOptions="Center" FontSize="18" TextColor="Black" FontAttributes="Bold" Margin="15,0,15,0"/>
+                            <Button x:Name="pageNext_Button" Clicked="pageNext_Button_Clicked" Text="NASTEPNA" BackgroundColor="SkyBlue" CornerRadius="10" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
