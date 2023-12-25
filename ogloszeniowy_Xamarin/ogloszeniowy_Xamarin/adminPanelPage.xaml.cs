@@ -52,22 +52,26 @@ namespace ogloszeniowy_Xamarin
 
         private async void announcementAdd_Button_Clicked(object sender, EventArgs e)
         {
-            Announcement announcement = new Announcement()
+            for (int i = 0; i < 25; i++)
             {
-                Company_id = ((Company)company_Picker.SelectedItem).Company_id,
-                Category_id = ((Announcement_category)category_Picker.SelectedItem).AnnouncementCategory_id,
-                Position_name = occupationName_Entry.Text,
-                Position_level = (string)positionLevel_Picker.SelectedItem,
-                Contract_type = (string)contractType_Picker.SelectedItem,
-                Working_time = (string)workingTime_Picker.SelectedItem,
-                Work_type = (string)workType_Picker.SelectedItem,
-                End_date = endDate_DatePicker.Date,
-                Responsibilities = responsibilities_Editor.Text,
-                Requirements = requirements_Editor.Text,
-                Benefits = benefits_Editor.Text
-            };
+                Announcement announcement = new Announcement()
+                {
+                    Company_id = ((Company)company_Picker.SelectedItem).Company_id,
+                    Adress = Adress_Entry.Text,
+                    Category_id = ((Announcement_category)category_Picker.SelectedItem).AnnouncementCategory_id,
+                    Position_name = occupationName_Entry.Text,
+                    Position_level = (string)positionLevel_Picker.SelectedItem,
+                    Contract_type = (string)contractType_Picker.SelectedItem,
+                    Working_time = (string)workingTime_Picker.SelectedItem,
+                    Work_type = (string)workType_Picker.SelectedItem,
+                    End_date = endDate_DatePicker.Date,
+                    Responsibilities = responsibilities_Editor.Text,
+                    Requirements = requirements_Editor.Text,
+                    Benefits = benefits_Editor.Text
+                };
 
-            await App.Database.InsertAnnouncement(announcement);
+                await App.Database.InsertAnnouncement(announcement);
+            }
         }
 
         private async void companyAdd_Button_Clicked(object sender, EventArgs e)

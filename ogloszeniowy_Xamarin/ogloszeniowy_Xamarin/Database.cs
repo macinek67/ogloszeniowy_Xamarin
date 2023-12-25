@@ -89,9 +89,20 @@ namespace system_ogloszeniowyAleToXamarin
             return _database.QueryAsync<User_saved>("SELECT * FROM User_saved WHERE Saved_id=? LIMIT 1", saved_id);
         }
 
+        public Task<List<Announcement>> GetAnnouncementWithPageFilter(int page, int annPerPage)
+        {
+            int offset = (page * annPerPage) - annPerPage;
+            return _database.QueryAsync<Announcement>("SELECT * FROM Announcement LIMIT ? OFFSET ?", annPerPage, offset);
+        }
+
         public Task<List<Announcement>> GetAnnouncementById(int announcement_id)
         {
             return _database.QueryAsync<Announcement>("SELECT * FROM Announcement WHERE Announcement_id=? LIMIT 1", announcement_id);
+        }
+
+        public Task<List<Announcement>> GetAnnouncementByFiltres(string positionName, int category_id, string positionLevel, string contractType, string workingTime, string workType)
+        {
+            return _database.QueryAsync<Announcement>("SELECT * FROM Announcement WHERE Category_id=? AND Position_name LIKE ? AND Position_level=? AND Contract_type=? AND Working_time=? AND Work_type=?", category_id, $"%{positionName}%", positionLevel, contractType, workingTime, workType);
         }
 
         public Task<int> InsertAnnouncement(Announcement announcement)
