@@ -18,6 +18,12 @@ namespace ogloszeniowy_Xamarin
         {
             InitializeComponent();
             this.user = user;
+            UploadAnnoucementData();
+        }
+
+        public async void UploadAnnoucementData()
+        {
+
         }
 
         private async void categoryAdd_Button_Clicked(object sender, EventArgs e)
@@ -43,6 +49,17 @@ namespace ogloszeniowy_Xamarin
         }
 
         private async void announcementAdd_Button_Clicked(object sender, EventArgs e)
+        {
+            Company company = new Company()
+            {
+                Name = companyName_Entry.Text
+            };
+
+            companyName_Entry.Text = "";
+            await App.Database.InsertCompany(company);
+        }
+
+        private void companyAdd_Button_Clicked(object sender, EventArgs e)
         {
 
         }

@@ -108,5 +108,10 @@ namespace system_ogloszeniowyAleToXamarin
         {
             return _database.InsertAsync(category);
         }
+
+        public Task<int> InsertCompany(Company company)
+        {
+            return _database.InsertAsync(company);
+        }
     }
 }

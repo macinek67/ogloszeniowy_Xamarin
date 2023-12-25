@@ -35,28 +35,77 @@
                     </Frame>
                     <Frame CornerRadius="15" Margin="0,5,0,0">
                         <StackLayout BackgroundColor="White">
+                            <Label Text="DODAJ FIRME" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
+                            <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
+                            <Label Text="Nazwa:" FontAttributes="Bold"/>
+                            <Entry x:Name="companyName_Entry"/>
+                            <Button x:Name="companyAdd_Button" Clicked="companyAdd_Button_Clicked" Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame CornerRadius="15" Margin="0,5,0,0">
+                        <StackLayout BackgroundColor="White">
                             <Label Text="DODAJ OGLOSZENIE" HorizontalOptions="Center" TextColor="Black" FontAttributes="bold"/>
                             <BoxView HeightRequest="2" BackgroundColor="Black" Margin="0,0,0,10"/>
                             <Label Text="Firma:" FontAttributes="Bold"/>
-                            <Picker></Picker>
+                            <Picker x:Name="company_Picker"></Picker>
                             <Label Text="Kategoria:" FontAttributes="Bold"/>
-                            <Picker></Picker>
+                            <Picker x:Name="category_Picker"></Picker>
                             <Label Text="Nazwa stanowiska:" FontAttributes="Bold"/>
-                            <Entry/>
+                            <Entry x:Name="occupationName_Entry"/>
+                            <Label Text="Poziom stanowiska:" FontAttributes="Bold"/>
+                            <Picker x:Name="positionLevel_Picker">
+                                <Picker.Items>
+                                    <x:String>Praktykant / stazysta</x:String>
+                                    <x:String>Asystent</x:String>
+                                    <x:String>Mlodszy specjalista (junior)</x:String>
+                                    <x:String>Specjalista (Mid / Regular)</x:String>
+                                    <x:String>Starszy specjalista (Senior)</x:String>
+                                    <x:String>Ekspert</x:String>
+                                    <x:String>Kierownik / koordynator</x:String>
+                                    <x:String>Menedzer</x:String>
+                                    <x:String>Dyrektor</x:String>
+                                    <x:String>Prezes</x:String>
+                                    <x:String>Pracownik fizyczny</x:String>
+                                </Picker.Items>
+                            </Picker>
                             <Label Text="Typ kontraktu:" FontAttributes="Bold"/>
-                            <Picker></Picker>
+                            <Picker x:Name="contractType_Picker">
+                                <Picker.Items>
+                                    <x:String>Umowa o prace</x:String>
+                                    <x:String>Umowa o dzielo</x:String>
+                                    <x:String>Umowa zlecenie</x:String>
+                                    <x:String>Kontrakt B2B</x:String>
+                                    <x:String>Umowa na zastepstwo</x:String>
+                                    <x:String>Umowa agencyjna</x:String>
+                                    <x:String>Umowa o prace tymczasowa</x:String>
+                                    <x:String>Umowa o staz / praktyki</x:String>
+                                </Picker.Items>
+                            </Picker>
                             <Label Text="Wymiar pracy:" FontAttributes="Bold"/>
-                            <Picker></Picker>
+                            <Picker x:Name="workingTime_Picker">
+                                <Picker.Items>
+                                    <x:String>Czesc etatu</x:String>
+                                    <x:String>Dodatkowa / tymczasowa</x:String>
+                                    <x:String>Pelny etat</x:String>
+                                </Picker.Items>
+                            </Picker>
                             <Label Text="Tryb pracy:" FontAttributes="Bold"/>
-                            <Picker></Picker>
+                            <Picker x:Name="workType_Picker">
+                                <Picker.Items>
+                                    <x:String>Praca stacjonarna</x:String>
+                                    <x:String>Praca hybrydowa</x:String>
+                                    <x:String>Praca zdalna</x:String>
+                                    <x:String>Praca mobilna</x:String>
+                                </Picker.Items>
+                            </Picker>
                             <Label Text="Data zakonczenia:" FontAttributes="Bold"/>
-                            <DatePicker/>
+                            <DatePicker x:Name="endDate_DatePicker"/>
                             <Label Text="Obowiazki:" FontAttributes="Bold"/>
-                            <Editor HeightRequest="125"/>
+                            <Editor x:Name="responsibilities_Editor" HeightRequest="125"/>
                             <Label Text="Wymagania:" FontAttributes="Bold"/>
-                            <Editor HeightRequest="125"/>
+                            <Editor x:Name="requirements_Editor" HeightRequest="125"/>
                             <Label Text="Benefity:" FontAttributes="Bold"/>
-                            <Editor HeightRequest="125"/>
+                            <Editor x:Name="benefits_Editor" HeightRequest="125"/>
                             <Button x:Name="announcementAdd_Button" Clicked="announcementAdd_Button_Clicked" Text="ZAPISZ" BackgroundColor="DeepSkyBlue" CornerRadius="10" FontAttributes="Bold" FontSize="20" Margin="0,10,0,0"/>
                         </StackLayout>
                     </Frame>
