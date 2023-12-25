@@ -98,5 +98,15 @@ namespace system_ogloszeniowyAleToXamarin
         {
             return _database.UpdateAsync(user_data);
         }
+
+        public Task<int> UpdateUser(User user)
+        {
+            return _database.UpdateAsync(user);
+        }
+
+        public Task<int> InsertCategory(Announcement_category category)
+        {
+            return _database.InsertAsync(category);
+        }
     }
 }
