@@ -32,6 +32,8 @@ namespace ogloszeniowy_Xamarin
                 };
                 await App.Database.InsertUser_data(newUserData);
             }
+
+            temp = (await App.Database.GetUser_data(user.User_id));
             userData = temp[0];
 
 			if(userData.Name != null) name_Entry.Text = userData.Name;

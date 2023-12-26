@@ -89,19 +89,29 @@ namespace ogloszeniowy_Xamarin
                     workType
                 );
 
-                annForGlobal = FiltredAnnoucements;
-                allAnnoucements.Clear();
-                int offset = ((currentPage * annPerPage) - annPerPage);
-                for (int i = offset; i < offset+annPerPage; i++)
+                if (FiltredAnnoucements != null && FiltredAnnoucements.Count() != 0)
                 {
-                    allAnnoucements.Add(FiltredAnnoucements.ElementAt(i));
+                    annForGlobal = FiltredAnnoucements;
+                    allAnnoucements.Clear();
+                    int offset = ((currentPage * annPerPage) - annPerPage);
+                    for (int i = offset; i < offset + annPerPage; i++)
+                    {
+                        allAnnoucements.Add(FiltredAnnoucements.ElementAt(i));
+                    }
+                }
+                else
+                {
+                    annForGlobal = new List<Announcement>();
                 }
             }
 
 
             gloabalAllAnnoucements = annForGlobal;
 
-            if (allAnnoucements == null || allAnnoucements.Count() == 0) return;
+            if (gloabalAllAnnoucements == null || gloabalAllAnnoucements.Count() == 0)
+            {
+                allAnnoucements = new List<Announcement>();
+            }
 
 
             List<List<string>> announcementsList = new List<List<string>>();
