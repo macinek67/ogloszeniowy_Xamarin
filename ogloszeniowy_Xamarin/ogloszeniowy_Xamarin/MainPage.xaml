@@ -4,8 +4,42 @@
              x:Class="ogloszeniowy_Xamarin.MainPage" BackgroundColor="#e8e8e8"
              >
 
-    <StackLayout>
-        
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="White" Padding="0">
+                <Image Source="appLogo.png" HeightRequest="60"/>
+            </Frame>
+            <StackLayout>
+                <Frame CornerRadius="15" Margin="5">
+                    <StackLayout BackgroundColor="White">
+                        <Label Text="WITAJ NA STRONIE GLOWNEJ!" HorizontalOptions="Center" FontSize="20" TextColor="Black" FontAttributes="bold"/>
+                    </StackLayout>
+                </Frame>
+                <Image Source="xamBaner.png"/>
+            </StackLayout>
+            <StackLayout Padding="10" Margin="2,2,2,2">
+                <Label Text="Co zyskujesz przez korzystanie z naszej aplikacji?" FontAttributes="Bold" TextColor="DeepSkyBlue" FontSize="18" HorizontalTextAlignment="Center"/>
+                <Frame CornerRadius="15">
+                    <StackLayout BackgroundColor="White">
+                        <Label Text="Z nami składanie aplikacji o pracę to czysta przyjemność! Dzięki intuicyjnemu interfejsowi możesz szybko i łatwo przesyłać swoje CV i list motywacyjny. Zaoszczędź czas i zdobądź wymarzoną pracę bez zbędnego stresu." HorizontalOptions="Center" FontSize="14" TextColor="Black" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="10" Margin="2,-15,2,2">
+                <Frame CornerRadius="15">
+                    <StackLayout BackgroundColor="White">
+                        <Label Text="Dołącz do naszej społeczności zawodowej, gdzie możesz budować swoją markę osobistą, nawiązywać kontakty z innymi profesjonalistami i być na bieżąco z najnowszymi trendami branżowymi. Twoja droga do sukcesu zaczyna się tutaj" HorizontalOptions="Center" FontSize="14" TextColor="Black" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="10" Margin="2,-15,2,2">
+                <Frame CornerRadius="15">
+                    <StackLayout BackgroundColor="White">
+                        <Label Text="Zapewniamy dostęp do danych i analiz dotyczących rynku pracy, dzięki czemu możesz śledzić trendy zatrudnienia i wynagrodzeń w swojej branży. Bądź na czele gry, podejmując świadome decyzje dotyczące swojej kariery zawodowej." HorizontalOptions="Center" FontSize="14" TextColor="Black" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
