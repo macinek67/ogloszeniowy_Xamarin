@@ -13,34 +13,28 @@
                 <StackLayout Padding="10">
                     <Frame CornerRadius="15" Padding="10">
                         <StackLayout BackgroundColor="White">
-                            <Label Text="Senior React Software Engineer" FontAttributes="Bold" TextColor="IndianRed" FontSize="20"/>
-                            <Label Text="BCF Software Sp. z o.o." TextColor="DeepSkyBlue" FontAttributes="Bold"/>
+                            <Label x:Name="positionName_Label" Text="Senior React Software Engineer" FontAttributes="Bold" TextColor="IndianRed" FontSize="20"/>
+                            <Label x:Name="company_Label" Text="BCF Software Sp. z o.o." TextColor="DeepSkyBlue" FontAttributes="Bold"/>
                             <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,5"/>
                             <Label Text="Podstawowe informacje" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" Margin="0,0,0,10"/>
-                            <Label Text="• Lokalizacja: Katowice" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Poziom stanowiska: Ekspert" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Typ umowy: umowa zlecenie" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Wymiar pracy: Pelen etat" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Tryb pracy: Praca zdalna" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
+                            <Label x:Name="adress_Label" Text="• Lokalizacja: Katowice" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
+                            <Label x:Name="positionLevel_Label" Text="• Poziom stanowiska: Ekspert" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
+                            <Label x:Name="contractType_Label" Text="• Typ umowy: umowa zlecenie" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
+                            <Label x:Name="workTime_Label" Text="• Wymiar pracy: Pelen etat" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
+                            <Label x:Name="workType_Label" Text="• Tryb pracy: Praca zdalna" TextColor="DodgerBlue" FontAttributes="Bold" Margin="0,0,0,5"/>
                             <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,5"/>
                             <Label Text="Obowiazki" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" Margin="0,0,0,10"/>
-                            <Label Text="• Design, implement and testing new features and change requests, involving the full technology stack" TextColor="DarkViolet" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Design, implement and testing new features and change requests, involving the full technology stack" TextColor="DarkViolet" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Design, implement and testing new features and change requests, involving the full technology stack" TextColor="DarkViolet" FontAttributes="Bold" Margin="0,0,0,5"/>
+                            <StackLayout x:Name="Responsibilities_StackLayout"></StackLayout>
                             <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,5"/>
                             <Label Text="Wymagania" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" Margin="0,0,0,10"/>
-                            <Label Text="• Proved record of 3+ years of experience at development of Java" TextColor="Red" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Proved record of 3+ years of experience at development of Java" TextColor="Red" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Proved record of 3+ years of experience at development of Java" TextColor="Red" FontAttributes="Bold" Margin="0,0,0,5"/>
+                            <StackLayout x:Name="Requirements_StackLayout"></StackLayout>
                             <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,5"/>
                             <Label Text="Benefity" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" Margin="0,0,0,10"/>
-                            <Label Text="• Stable employment conditions based on an employment contract" TextColor="Green" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Stable employment conditions based on an employment contract" TextColor="Green" FontAttributes="Bold" Margin="0,0,0,5"/>
-                            <Label Text="• Stable employment conditions based on an employment contract" TextColor="Green" FontAttributes="Bold" Margin="0,0,0,5"/>
+                            <StackLayout x:Name="Benefits_StackLayout"></StackLayout>
                             <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,5"/>
                             <Label Text="Mozliwe akcje" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" Margin="0,0,0,10"/>
-                            <Button Text="APLIKUJ" BackgroundColor="SkyBlue" CornerRadius="15" FontAttributes="Bold" FontSize="17"/>
-                            <Button Text="ZAPISZ" BackgroundColor="IndianRed" CornerRadius="15" FontAttributes="Bold" FontSize="17" Margin="0,10,0,0"/>
+                            <Button x:Name="apply_Button" Clicked="apply_Button_Clicked" Text="APLIKUJ" BackgroundColor="SkyBlue" CornerRadius="15" FontAttributes="Bold" FontSize="17"/>
+                            <Button x:Name="save_Button" Clicked="save_Button_Clicked" Text="ZAPISZ" BackgroundColor="IndianRed" CornerRadius="15" FontAttributes="Bold" FontSize="17" Margin="0,10,0,0"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
