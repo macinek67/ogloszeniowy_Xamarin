@@ -55,8 +55,9 @@ namespace ogloszeniowy_Xamarin
 			//	User_id = 3
 			//};
 			//await App.Database.InsertApplication(app);
-			var tappedAnnouncement_id = ((List<string>)((Frame)sender).BindingContext)[0];
-            DisplayAlert("Kliknieto!", "Wlasnie kliknales ogloszenie o id: " + tappedAnnouncement_id, "OK");
+			int tappedAnnouncement_id = int.Parse(((List<string>)((Frame)sender).BindingContext)[0]);
+            Announcement ann = (await App.Database.GetAnnouncementById(tappedAnnouncement_id))[0];
+            Navigation.PushAsync(new AnnouncementPage(this.user, ann));
         }
     }
 }
